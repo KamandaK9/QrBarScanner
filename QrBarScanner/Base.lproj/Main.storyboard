@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7GW-wB-FEa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QrBarScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moz-Gt-6Zj">
+                                <rect key="frame" x="82" y="337" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Dg0-La-wu1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-uC-FWV">
+                                <rect key="frame" x="82" y="446" width="258" height="34.5"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="Tvc-ll-zct"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Scan">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evx-Te-3UR"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ScannedItems:" translatesAutoresizingMaskIntoConstraints="NO" id="evd-fE-8J4">
+                                <rect key="frame" x="87" y="525.5" width="253" height="267.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoK-FJ-6nN">
+                                <rect key="frame" x="99" y="159" width="295" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="evd-fE-8J4" secondAttribute="trailing" constant="74" id="8Lw-Pa-18h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="evd-fE-8J4" secondAttribute="bottom" constant="69" id="AxW-it-E7H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NoK-FJ-6nN" secondAttribute="trailing" constant="20" id="BCX-uS-PZl"/>
+                            <constraint firstItem="moz-Gt-6Zj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="245" id="OCh-q4-mbg"/>
+                            <constraint firstItem="moz-Gt-6Zj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QNy-kQ-Tr4"/>
+                            <constraint firstItem="NoK-FJ-6nN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="S5H-ch-UR2"/>
+                            <constraint firstItem="evd-fE-8J4" firstAttribute="top" secondItem="OfN-uC-FWV" secondAttribute="bottom" constant="45" id="bQ0-C6-AY2"/>
+                            <constraint firstItem="OfN-uC-FWV" firstAttribute="top" secondItem="moz-Gt-6Zj" secondAttribute="bottom" constant="75" id="irA-bC-jv5"/>
+                            <constraint firstItem="moz-Gt-6Zj" firstAttribute="top" secondItem="NoK-FJ-6nN" secondAttribute="bottom" constant="113" id="nOJ-aa-aB7"/>
+                            <constraint firstItem="NoK-FJ-6nN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="oEB-Vk-Mve"/>
+                            <constraint firstItem="moz-Gt-6Zj" firstAttribute="leading" secondItem="OfN-uC-FWV" secondAttribute="leading" id="rBm-71-zWQ"/>
+                            <constraint firstItem="evd-fE-8J4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="z43-Zh-pCs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pGx-Qq-G6h"/>
+                    <connections>
+                        <outlet property="btnScan" destination="OfN-uC-FWV" id="o5h-CJ-w23"/>
+                        <outlet property="itemsList" destination="evd-fE-8J4" id="eer-nr-21Q"/>
+                        <outlet property="loadingCompleteLbl" destination="NoK-FJ-6nN" id="wpf-Xv-A62"/>
+                        <outlet property="scanTxtfield" destination="moz-Gt-6Zj" id="Cc0-zO-QYw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.78260869565224" y="2.6785714285714284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yzh-sA-dU2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7GW-wB-FEa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MQO-M5-z3M">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Na-zn-smM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlM-TZ-eoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
